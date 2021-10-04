@@ -41,13 +41,10 @@ body {
 .wrap_container {
   max-width: 1140px;
   margin: 0 auto;
+  padding: 0 8px;
 }
 img {
   width: 100%;
-}
-section {
-  margin-top: 94px;
-  padding: 32px 8px;
 }
 header {
   margin-top: 16px;
@@ -72,6 +69,7 @@ header {
 .title_section {
   text-align: center;
   margin-bottom: 64px;
+  margin-top: 96px;
 }
 .content {
   max-width: 900px;
@@ -117,6 +115,10 @@ button {
   transition: 0.5s all;
   font-size: 13px;
 }
+button:hover {
+  background-color: rgb(48, 48, 48);
+  color: #fff;
+}
 .bottom a {
   background-color: rgb(48, 48, 48);
   padding: 16px 16px;
@@ -129,6 +131,10 @@ button {
 }
 .nav_tabs {
   background: #f2f2f2;
+  margin-top: 96px;
+}
+.tab-content {
+  margin-bottom: 64px;
 }
 .tab_content_color {
   display: flex;
@@ -239,11 +245,24 @@ button {
   background-image: url(../img/bg_wath.png);
   background-size: cover;
   background-position: center center;
-  padding: 64px 0 0 0;
+  padding: 8px 0 0 0;
+}
+.bg_sect {
+  background-image: url(../img/bg_lids_2.png);
+  background-size: cover;
+}
+.bg_sect_content_descript {
+  text-align: center;
+  padding: 76px 0;
+}
+.bg_sect_content_descript h2 {
+  font-weight: 600;
+  line-height: 56px;
 }
 .bg_lids {
   background-image: url(../img/bg_lids_1.png);
   background-size: cover;
+  background-position: center center;
 }
 .lid_wrap {
   display: flex;
@@ -281,4 +300,46 @@ button {
 .modal-content {
   border: none;
   border-radius: 0px;
+}
+.our {
+  margin-bottom: 64px;
+}
+.our_content {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .our_content {
+    flex-direction: column;
+  }
+}
+.our_content_item_left {
+  margin-top: 32px;
+  max-width: 320px;
+  margin-right: 32px;
+  text-align: right;
+}
+.our_content_item_left img {
+  width: 17%;
+  margin-bottom: 16px;
+}
+.our_content_item_right {
+  margin-top: 32px;
+  text-align: left;
+  max-width: 320px;
+  margin-left: 32px;
+}
+.our_content_item_right img {
+  width: 17%;
+  margin-bottom: 16px;
+}
+.our_content_item_left h5 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+.our_content_item_right h5 {
+  font-weight: 600;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
 }
