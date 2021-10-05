@@ -1,3 +1,29 @@
+<!-- <?php
+$name = trim($_POST['name']);
+$email = trim($_POST['email']);
+$phone = trim($_POST['phone']);
+$city = trim($_POST['city']);
+
+// указываем адрес отправителя, можно указать адрес на домене Вашего сайта
+$fromMail = 'admin@nirvel.ru';
+$fromName = 'promo.nirvel.ru Форма';
+
+// Сюда введите Ваш email
+$emailTo = 'youemail@gmail.com';
+$subject = 'Заявка на сотрудничество';
+$subject = '=?utf-8?b?'. base64_encode($subject) .'?=';
+$headers = "Content-type: text/plain; charset=\"utf-8\"\r\n";
+$headers .= "From: ". $fromName ." <". $fromMail ."> \r\n";
+
+// тело письма
+$body = "Получено письмо с сайта promo.nirvel \n Имя: $name\nТелефон: $phone \n E-mail: $email \n City: $city;
+
+// сообщение будет отправлено в случае, если поле с номером телефона не пустое
+if (strlen($phone) > 0) {
+    $mail = mail($emailTo, $subject, $body, $headers, '-f'. $fromMail );
+}
+
+?> -->
 <!doctype html>
 <html lang="ru">
 
@@ -9,8 +35,7 @@
     <link rel="stylesheet" href="./libs/Magnific-Popup-master/dist/magnific-popup.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style/style.css">
-
-    <title>Привет мир!</title>
+    <title></title>
 </head>
 
 <body>
@@ -21,10 +46,10 @@
                     <img src="./img/logo.png" alt="">
                 </div>
                 <div class="contacts">
-                    <a href="">info@nirvel.ru</a>
-                    <a href="">nirvel.ru</a>
+                    <a href="mailto:info@igrobeauty.ru">info@nirvel.ru</a>
+                    <a href="https://nirvel.ru/" target="blank">nirvel.ru</a>
                     <div class="phone">
-                        <a href="">+7(495)123-45-67</a>
+                        <a href="tel:+74951234567">+7(495)123-45-67</a>
                     </div>
                 </div>
             </div>
@@ -32,7 +57,7 @@
         </div>
         <div class="main_header">
             <div class="wrap_container">
-                <div class=" offset-md-7 col-md-6">
+                <div class=" offset-md-6 col-md-6">
                     <div class="header_title">
                         <h1>NIRVEL PROFESSIONAL</h1>
                         <h4>Испанская профессиональная <br> косметика бизнес-класса по демократичной цене. </h4>
@@ -76,7 +101,7 @@
                                         </ul>
                                     </div>
                                     <div class="bottom">
-                                        <a href="https://nirvel.ru">НА ОФИЦИАЛЬНЫЙ САЙТ</a>
+                                        <a href="https://nirvel.ru" target="blank">НА ОФИЦИАЛЬНЫЙ САЙТ</a>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +134,7 @@
                             aria-selected="false">NUTRE COLOR</button>
                         <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-deco-color" type="button" role="tab" aria-controls="nav-deco-color"
-                            aria-selected="false">DECO COLOR</button>
+                            aria-selected="false">DECO</button>
                     </div>
                 </nav>
             </div>
@@ -306,8 +331,6 @@
             </div>
         </div>
     </div>
-
-
 
     <section>
         <div class="wrap_container">
@@ -606,12 +629,46 @@
             </div>
         </div>
     </div>
-
-
+    <div class="script_bg_mobile">
+        <div class="script_bg_contact">
+            <h2>НАШИ КОНТАКТЫ</h2>
+            <p>Компания <strong>ООО "ИГРО"</strong> - Эксклюзивный дистрибьютор марки <br> <strong>Nirvel
+                    Professional</strong> в России.</p>
+            <h5>109518, Россия, г. Москва, <br> Грайвороновская ул., д. 4, стр. 2</h5>
+            <div class="script_bg_contact_phone">
+                <a href="tel:+74951093333">+7 (495) 109-33-33 (Многоканальный)</a> <br>
+                <a href="tel:+74951093333">+7 (495) 988-58-59 (Многоканальный)</a> <br>
+                <a href="mailto:info@igrobeauty.ru">info@igrobeauty.ru</a>
+            </div>
+            <div class="script_bg_contact_date">
+                <p>Прием заказов и консультации по телефону <br>
+                    Пн.-Пт. с 09:00 до 19:00 <br>
+                    Суббота с 10:00 до 17:00</p>
+            </div>
+            <div class="script_bg_contact_icon">
+                <a href="https://vk.com/nirvel" target="blank">
+                    <img src="./img/vk-social.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/Nirvel-Professional-Russia-102140298459906" target="blank">
+                    <img src="./img/facebook-logo.png" alt="">
+                </a>
+                <a href="https://vk.com/nirvel" target="blank">
+                    <img src="./img/instagram.png" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC7q5mip-yxm6niHKrDXkuqA" target="blank">
+                    <img src="./img/youtube.png" alt="">
+                </a>
+            </div>
+            <div class="script_bg_contact_links">
+                <a href="https://nirvel.ru/" target="blank">NIRVEL.RU</a> <br>
+                <a href="https://igrobeauty.ru/" target="blank">IGROBEAUTY.RU</a>
+            </div>
+        </div>
+    </div>
     <div class="maps">
         <div class="script_map">
             <script type="text/javascript" charset="utf-8" async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2ed40cd3888f1b6f3ef8c37b2a532ef669149de4f0e6884e7ab3c78e7e4a3298&amp;width=100%25&amp;height=660&amp;lang=ru_RU&amp;scroll=false"></script>
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2ed40cd3888f1b6f3ef8c37b2a532ef669149de4f0e6884e7ab3c78e7e4a3298&amp;width=100%25&amp;height=660&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
         <div class="script_bg">
             <div class="script_bg_contact">
@@ -621,8 +678,8 @@
                 <h5>109518, Россия, г. Москва, <br> Грайвороновская ул., д. 4, стр. 2</h5>
                 <div class="script_bg_contact_phone">
                     <a href="tel:+74951093333">+7 (495) 109-33-33 (Многоканальный)</a> <br>
-                    <a href="tel:+74951093333">+7 (495) 988-58-59 (Многоканальный)</a>
-                    <p>info@igrobeauty.ru</p>
+                    <a href="tel:+74951093333">+7 (495) 988-58-59 (Многоканальный)</a> <br>
+                    <a href="mailto:info@igrobeauty.ru">info@igrobeauty.ru</a>
                 </div>
                 <div class="script_bg_contact_date">
                     <p>Прием заказов и консультации по телефону <br>
@@ -630,22 +687,22 @@
                         Суббота с 10:00 до 17:00</p>
                 </div>
                 <div class="script_bg_contact_icon">
-                    <a href="">
+                    <a href="https://vk.com/nirvel" target="blank">
                         <img src="./img/vk-social.png" alt="">
                     </a>
-                    <a href="">
+                    <a href="https://www.facebook.com/Nirvel-Professional-Russia-102140298459906" target="blank">
                         <img src="./img/facebook-logo.png" alt="">
                     </a>
-                    <a href="">
+                    <a href="https://vk.com/nirvel" target="blank">
                         <img src="./img/instagram.png" alt="">
                     </a>
-                    <a href="">
+                    <a href="https://www.youtube.com/channel/UC7q5mip-yxm6niHKrDXkuqA" target="blank">
                         <img src="./img/youtube.png" alt="">
                     </a>
                 </div>
                 <div class="script_bg_contact_links">
-                    <a href="">NIRVEL.RU</a> <br>
-                    <a href="">IGROBEAUTY.RU</a>
+                    <a href="https://nirvel.ru/" target="blank">NIRVEL.RU</a> <br>
+                    <a href="https://igrobeauty.ru/" target="blank">IGROBEAUTY.RU</a>
                 </div>
             </div>
         </div>
@@ -661,17 +718,17 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="row g-3 needs-validation" novalidate>
+                        <form action="index.php" method="post" class="row g-3 needs-validation" novalidate>
                             <div class="col-md-12 position-relative">
-                                <input type="text" placeholder="Ваше Имя" class="form-control" id="validationTooltip01"
-                                    value="" required>
+                                <input type="text" name="name" placeholder="Ваше Имя" class="form-control"
+                                    id="validationTooltip01" value="" required>
                                 <div class="invalid-tooltip">
                                     В ведите ваше Имя
                                 </div>
                             </div>
                             <div class="col-md-12 position-relative">
                                 <div class="input-group has-validation">
-                                    <input type="text" placeholder="Ваш e-mail" class="form-control"
+                                    <input type="text" name="email" placeholder="Ваш e-mail" class="form-control"
                                         id="validationTooltipUsername"
                                         aria-describedby="validationTooltipUsernamePrepend" required>
                                     <div class="invalid-tooltip">
@@ -680,21 +737,21 @@
                                 </div>
                             </div>
                             <div class="col-md-12 position-relative">
-                                <input type="text" placeholder="Ваш телефон" class="form-control"
+                                <input name="phone" type="text" placeholder="Ваш телефон" class="form-control"
                                     id="validationTooltip03" required>
                                 <div class="invalid-tooltip">
                                     В ведите ваш номер телефона
                                 </div>
                             </div>
                             <div class="col-md-6 position-relative">
-                                <input type="text" placeholder="Ваш Город" class="form-control" id="validationTooltip03"
-                                    required>
+                                <input type="text" name="city" placeholder="Ваш Город" class="form-control"
+                                    id="validationTooltip03" required>
                                 <div class="invalid-tooltip">
                                     В ведите ваш Город
                                 </div>
                             </div>
                             <div class="col-md-6 position-relative">
-                                <select class="form-select" id="validationTooltip04" required>
+                                <select name="select" class="form-select" id="validationTooltip04" required>
                                     <option selected disabled value="">Кто вы?</option>
                                     <option>Мастер</option>
                                     <option>Дистрибьютор</option>
@@ -704,7 +761,8 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="button" type="submit">НАЧАТЬ СОТРУДНИЧЕСТВО</button>
+                                <button class="button" value="Отправить сообщение" type="submit">НАЧАТЬ
+                                    СОТРУДНИЧЕСТВО</button>
                             </div>
                         </form>
                     </div>
