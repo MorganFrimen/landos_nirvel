@@ -1,29 +1,3 @@
-<!-- <?php
-$name = trim($_POST['name']);
-$email = trim($_POST['email']);
-$phone = trim($_POST['phone']);
-$city = trim($_POST['city']);
-
-// указываем адрес отправителя, можно указать адрес на домене Вашего сайта
-$fromMail = 'admin@nirvel.ru';
-$fromName = 'promo.nirvel.ru Форма';
-
-// Сюда введите Ваш email
-$emailTo = 'youemail@gmail.com';
-$subject = 'Заявка на сотрудничество';
-$subject = '=?utf-8?b?'. base64_encode($subject) .'?=';
-$headers = "Content-type: text/plain; charset=\"utf-8\"\r\n";
-$headers .= "From: ". $fromName ." <". $fromMail ."> \r\n";
-
-// тело письма
-$body = "Получено письмо с сайта promo.nirvel \n Имя: $name\nТелефон: $phone \n E-mail: $email \n City: $city;
-
-// сообщение будет отправлено в случае, если поле с номером телефона не пустое
-if (strlen($phone) > 0) {
-    $mail = mail($emailTo, $subject, $body, $headers, '-f'. $fromMail );
-}
-
-?> -->
 <!doctype html>
 <html lang="ru">
 
@@ -119,7 +93,6 @@ if (strlen($phone) > 0) {
     <section>
         <div class="wrap_container">
             <div class="nav_tabs">
-
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
@@ -509,17 +482,17 @@ if (strlen($phone) > 0) {
                         <p>Оставь заявку сейчас и получи скидку <strong>до 25%</strong> <br>
                             на первый заказ.</p>
                     </div>
-                    <form class="row g-3 needs-validation" novalidate>
+                    <form action="mail.php" method="POST" class="row g-3 needs-validation" novalidate>
                         <div class="col-md-12 position-relative">
-                            <input type="text" placeholder="Ваше Имя" class="form-control" id="validationTooltip01"
-                                value="" required>
+                            <input type="text" name="name" placeholder="Ваше Имя" class="form-control"
+                                id="validationTooltip01" value="" required>
                             <div class="invalid-tooltip">
                                 В ведите ваше Имя
                             </div>
                         </div>
                         <div class="col-md-12 position-relative">
                             <div class="input-group has-validation">
-                                <input type="text" placeholder="Ваш e-mail" class="form-control"
+                                <input type="text" name="email" placeholder="Ваш e-mail" class="form-control"
                                     id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend"
                                     required>
                                 <div class="invalid-tooltip">
@@ -528,21 +501,21 @@ if (strlen($phone) > 0) {
                             </div>
                         </div>
                         <div class="col-md-12 position-relative">
-                            <input type="text" placeholder="Ваш телефон" class="form-control" id="validationTooltip03"
-                                required>
+                            <input name="phone" type="text" placeholder="Ваш телефон" class="form-control"
+                                id="validationTooltip03" required>
                             <div class="invalid-tooltip">
                                 В ведите ваш номер телефона
                             </div>
                         </div>
                         <div class="col-md-6 position-relative">
-                            <input type="text" placeholder="Ваш Город" class="form-control" id="validationTooltip03"
-                                required>
+                            <input type="text" name="city" placeholder="Ваш Город" class="form-control"
+                                id="validationTooltip03" required>
                             <div class="invalid-tooltip">
                                 В ведите ваш Город
                             </div>
                         </div>
                         <div class="col-md-6 position-relative">
-                            <select class="form-select" id="validationTooltip04" required>
+                            <select name="select" class="form-select" id="validationTooltip04" required>
                                 <option selected disabled value="">Кто вы?</option>
                                 <option>Мастер</option>
                                 <option>Дистрибьютор</option>
@@ -552,7 +525,8 @@ if (strlen($phone) > 0) {
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="button" type="submit">НАЧАТЬ СОТРУДНИЧЕСТВО</button>
+                            <button class="button" value="Отправить сообщение" type="submit">НАЧАТЬ
+                                СОТРУДНИЧЕСТВО</button>
                         </div>
                     </form>
                 </div>
@@ -604,7 +578,6 @@ if (strlen($phone) > 0) {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -668,7 +641,8 @@ if (strlen($phone) > 0) {
     <div class="maps">
         <div class="script_map">
             <script type="text/javascript" charset="utf-8" async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2ed40cd3888f1b6f3ef8c37b2a532ef669149de4f0e6884e7ab3c78e7e4a3298&amp;width=100%25&amp;height=660&amp;lang=ru_RU&amp;scroll=true"></script>
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2ed40cd3888f1b6f3ef8c37b2a532ef669149de4f0e6884e7ab3c78e7e4a3298&amp;width=100%25&amp;height=660&amp;lang=ru_RU&amp;scroll=true">
+                </script>
         </div>
         <div class="script_bg">
             <div class="script_bg_contact">
@@ -718,7 +692,7 @@ if (strlen($phone) > 0) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="index.php" method="post" class="row g-3 needs-validation" novalidate>
+                        <form action="mail.php" method="POST" class="row g-3 needs-validation" novalidate>
                             <div class="col-md-12 position-relative">
                                 <input type="text" name="name" placeholder="Ваше Имя" class="form-control"
                                     id="validationTooltip01" value="" required>
@@ -774,8 +748,8 @@ if (strlen($phone) > 0) {
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./libs/Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
     <script src="./common.js"></script>
