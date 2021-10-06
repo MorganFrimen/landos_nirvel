@@ -52,4 +52,16 @@ $(document).ready(function () {
       );
     });
   })();
+  $('form').submit(function (e) {
+    e.preventDefault;
+    $.ajax({
+      data: $(this).serialize(),
+    }).done(function () {
+      alert('Спасибо за заявку!');
+      setTimeout(function () {
+        var magnificPopup = $.magnificPopup.instance;
+        magnificPopup.close();
+      }, 1000);
+    });
+  });
 });

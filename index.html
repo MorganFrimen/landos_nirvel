@@ -16,6 +16,10 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VMW7LF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
         <div class="wrap_container">
             <div class="top_header">
@@ -485,7 +489,7 @@
                         <p>Оставь заявку сейчас и получи скидку <strong>до 25%</strong> <br>
                             на первый заказ.</p>
                     </div>
-                    <form action="mail.php" method="POST" class="row g-3 needs-validation" novalidate>
+                    <form id="application" action="mail.php" method="POST" class="row g-3 needs-validation" novalidate>
                         <div class="col-md-12 position-relative">
                             <input type="text" name="name" placeholder="Ваше Имя" class="form-control"
                                 id="validationTooltip01" value="" required>
@@ -697,7 +701,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="mail.php" method="POST" class="row g-3 needs-validation" novalidate>
+                        <form id="application_popup" action="mail.php" method="POST" class="row g-3 needs-validation"
+                            novalidate>
                             <div class="col-md-12 position-relative">
                                 <input type="text" name="name" placeholder="Ваше Имя" class="form-control"
                                     id="validationTooltip01" value="" required>
@@ -774,6 +779,14 @@
                 clickable: true,
             },
         });
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5VMW7LF');
     </script>
 
 </body>
