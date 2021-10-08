@@ -72,6 +72,30 @@ img {
 header {
   margin-top: 16px;
 }
+.navigation {
+  position: relative;
+  top: 16px;
+}
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.navigation a {
+  color: #333333;
+  margin: 0 24px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.navigation a:hover {
+  color: #292929;
+  border-bottom: 1px solid #333333;
+}
+@media (max-width: 768px) {
+  .navigation a {
+    padding: 0 12px;
+  }
+}
 .top_header {
   display: flex;
   justify-content: space-between;

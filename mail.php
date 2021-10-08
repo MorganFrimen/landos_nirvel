@@ -10,7 +10,7 @@ $fromMail = 'webmaster@promo.nirvel.ru';
 $fromName = 'promo.nirvel.ru Форма';
 
 // Сюда введите Ваш email
-$emailTo = 'web@igrobeauty.ru';
+$emailTo = 'eliseeva@igrobeauty.ru';
 $subject = 'Заявка на сотрудничество ';
 $subject = '=?utf-8?b?' . base64_encode($subject) . '?=';
 $headers = "Content-type: text/plain; charset=\"utf-8\"\r\n";

@@ -64,4 +64,18 @@ $(document).ready(function () {
       }, 1000);
     });
   });
+  $('a[href^="#"').on('click', function () {
+    let href = $(this).attr('href');
+
+    $('html, body').animate(
+      {
+        scrollTop: $(href).offset().top,
+      },
+      {
+        duration: 1200, // по умолчанию «400»
+        easing: 'linear', // по умолчанию «swing»
+      },
+    );
+    return false;
+  });
 });
