@@ -145,23 +145,25 @@ header {
   z-index: -1;
   position: absolute;
   object-fit: cover;
-  background-color: rgba(0, 0, 0, 0.692);
+  background-color: rgba(0, 0, 0, 0.623);
 }
 .header_title {
-  text-align: left;
   padding-top: 145px;
   margin-bottom: 32px;
+  text-align: center;
 }
 .header_title h1 {
   color: #fff;
+  font-size: 64px;
 }
 .header_title h4 {
   color: #fff;
 }
-.header_title ul li {
+.header_title ul  {
   color: #fff;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
+  padding-top: 64px;
 }
 .title_section {
   text-align: center;
@@ -228,7 +230,7 @@ ul {
   transition: 0.5s all;
   font-size: 13px;
   font-family: 'Open Sans', sans-serif;
-  display: block;
+  
   text-align: center;
   max-width: 276px;
 }
@@ -621,6 +623,9 @@ ul {
 }
 .script_bg_contact_links {
   margin-top: 8px;
+}
+.bootom_header {
+  text-align: center;
 }
 .bootom_header a {
   background-color: #fff;
