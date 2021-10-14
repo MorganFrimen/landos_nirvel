@@ -113,11 +113,39 @@ header {
   font-size: 24px;
   font-weight: bold;
 }
-.main_header {
+.main_header{
+  position: relative;
+}
+/* .main_header {
   background-image: url(../img/mainn_img.png);
   background-size: cover;
   background-position: center center;
   height: 650px;
+} */
+/* VIDEO */
+.probuct {
+  padding-top: 258px;
+}
+.video {
+  top: 75%;
+  width: 100%;
+  height: 750px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  z-index: -2;
+  position: absolute;
+  object-fit: cover;
+}
+.effects {
+  top: 75%;
+  width: 100%;
+  height: 750px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  z-index: -1;
+  position: absolute;
+  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.692);
 }
 .header_title {
   text-align: left;
