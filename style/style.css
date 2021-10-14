@@ -80,6 +80,7 @@ header {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .navigation a {
   color: #333333;
@@ -126,6 +127,11 @@ header {
 .probuct {
   padding-top: 258px;
 }
+@media (max-width: 370px) {
+  .probuct {
+    padding-top: 128px;
+  }
+}
 .video {
   top: 75%;
   width: 100%;
@@ -136,6 +142,7 @@ header {
   position: absolute;
   object-fit: cover;
 }
+
 .effects {
   top: 75%;
   width: 100%;
@@ -147,17 +154,45 @@ header {
   object-fit: cover;
   background-color: rgba(0, 0, 0, 0.623);
 }
+@media (max-width: 370px) {
+  .video, .effects {
+    top: 65%;;
+  }
+}
 .header_title {
   padding-top: 145px;
   margin-bottom: 32px;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .header_title {
+    padding-top: 105px;
+  }
+}
+@media (max-width: 480px) {
+  .header_title {
+    padding-top: 78px;
+  }
+}
+@media (max-width: 370px) {
+  .header_title {
+    padding-top: 38px;
+  }
+}
 .header_title h1 {
   color: #fff;
   font-size: 64px;
 }
+@media (max-width: 768px) {
+  .header_title h1 {
+    font-size: 32px;
+  }
+}
 .header_title h4 {
   color: #fff;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 36px;
 }
 .header_title ul  {
   color: #fff;
