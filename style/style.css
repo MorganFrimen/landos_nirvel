@@ -82,6 +82,11 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
 }
+@media (max-width: 370px) {
+  .navigation ul {
+    display: block;
+  }
+}
 .navigation a {
   color: #333333;
   margin: 0 24px;
@@ -127,7 +132,7 @@ header {
 .probuct {
   padding-top: 258px;
 }
-@media (max-width: 370px) {
+@media (max-width: 320px) {
   .probuct {
     padding-top: 128px;
   }
@@ -155,6 +160,12 @@ header {
   background-color: rgba(0, 0, 0, 0.623);
 }
 @media (max-width: 370px) {
+  .video,
+  .effects {
+    top: 70%;
+  }
+}
+@media (max-width: 320px) {
   .video,
   .effects {
     top: 65%;
@@ -270,6 +281,8 @@ ul {
   transition: 0.5s all;
   font-size: 13px;
   font-family: 'Open Sans', sans-serif;
+  display: block;
+  margin-bottom: 16px;
 
   text-align: center;
   max-width: 276px;
