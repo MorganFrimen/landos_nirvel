@@ -114,7 +114,7 @@ header {
   font-size: 24px;
   font-weight: bold;
 }
-.main_header{
+.main_header {
   position: relative;
 }
 /* .main_header {
@@ -155,8 +155,9 @@ header {
   background-color: rgba(0, 0, 0, 0.623);
 }
 @media (max-width: 370px) {
-  .video, .effects {
-    top: 65%;;
+  .video,
+  .effects {
+    top: 65%;
   }
 }
 .header_title {
@@ -194,7 +195,7 @@ header {
   font-weight: 100;
   line-height: 36px;
 }
-.header_title ul  {
+.header_title ul {
   color: #fff;
   font-weight: 600;
   font-size: 20px;
@@ -221,6 +222,9 @@ header {
 .text_slide {
   margin-top: 64px;
 }
+.text_slide h3 {
+  text-transform: uppercase;
+}
 @media (max-width: 768px) {
   .text_slide {
     margin-top: 0;
@@ -239,6 +243,7 @@ ul {
 }
 .descript_slider {
   margin-bottom: 32px;
+  max-width: 650px;
 }
 .button {
   border: none;
@@ -265,7 +270,7 @@ ul {
   transition: 0.5s all;
   font-size: 13px;
   font-family: 'Open Sans', sans-serif;
-  
+
   text-align: center;
   max-width: 276px;
 }
