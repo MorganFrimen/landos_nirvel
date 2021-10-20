@@ -281,9 +281,8 @@ ul {
   transition: 0.5s all;
   font-size: 13px;
   font-family: 'Open Sans', sans-serif;
-  display: block;
+  display: inline-block;
   margin-bottom: 16px;
-
   text-align: center;
   max-width: 276px;
 }
