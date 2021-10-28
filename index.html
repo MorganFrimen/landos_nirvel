@@ -730,8 +730,7 @@
                         <h2>ЕЩЕ ОСТАЛИСЬ <br> ВОПРОСЫ?</h2>
                     </div>
                     <div class="bottom">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">СТАТЬ НАШИМ
-                            ПРЕДСТАВИТЕЛЕМ</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModalQuest">ЗАДАТЬ НАМ ВОПРОС</a>
                     </div>
                 </div>
                 <div class="lid_content">
@@ -879,6 +878,64 @@
                             <div class="col-12">
                                 <button class="button" value="Отправить сообщение" type="submit">НАЧАТЬ
                                     СОТРУДНИЧЕСТВО</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hiden_form" id="contacts">
+        <!-- Modal -->
+        <div class="modal fade " id="exampleModalQuest" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ваш вопрос?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="application_popup" action="mail_quest.php" method="POST"
+                            class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-12 position-relative">
+                                <input type="text" name="name" placeholder="Ваше Имя" class="form-control"
+                                    id="validationTooltip01" value="" required>
+                                <div class="invalid-tooltip">
+                                    В ведите ваше Имя
+                                </div>
+                            </div>
+                            <div class="col-md-12 position-relative">
+                                <div class="input-group has-validation">
+                                    <input type="text" name="email" placeholder="Ваш e-mail" class="form-control"
+                                        id="validationTooltipUsername"
+                                        aria-describedby="validationTooltipUsernamePrepend" required>
+                                    <div class="invalid-tooltip">
+                                        В ведите вашу почту для связи
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 position-relative">
+                                <input name="phone" type="text" placeholder="Ваш телефон" class="form-control"
+                                    id="validationTooltip03" required>
+                                <div class="invalid-tooltip">
+                                    В ведите ваш номер телефона
+                                </div>
+                            </div>
+                            <div class="col-md-6 position-relative">
+                                <input type="text" name="city" placeholder="Ваш Город" class="form-control"
+                                    id="validationTooltip03" required>
+                                <div class="invalid-tooltip">
+                                    В ведите ваш Город
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea mesages="mesages" placeholder="Ваш вопрос" class="form-control"
+                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="button" value="Отправить сообщение" type="submit">ЗАДАТЬ ВОПРОС</button>
                             </div>
                         </form>
                     </div>
